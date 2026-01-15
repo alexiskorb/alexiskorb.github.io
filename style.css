@@ -82,6 +82,9 @@ footer {
   font-size: 0.9rem;
 }
 
+section {
+  scroll-margin-top: 80px; /* adjust to your header height */
+}
 
 .subtitle {
   color: var(--muted);
@@ -158,49 +161,112 @@ footer {
 }
 
 
-.topic-meta {
-  font-size: 1.1rem;
-  color: var(--muted);
-  font-weight: normal;
-}
-
-
-.video-meta {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: normal;
-}
-
-.video-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.video-links a {
-  text-decoration: none;
-  color: var(--text);
-  width: 220px;
-}
-
-.video-links img {
-  width: 100%;
+.video-link {
+  display: block;             /* allows margin and width control */
+  width: 400px;               /* fixed width */
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   transition: transform 0.2s;
+  margin: 1rem 0;
 }
 
-.video-links img:hover {
-  transform: scale(1.04);
+.video-link:hover {
+  transform: scale(1.04);    /* hover zoom effect */
 }
 
-.video-links span {
-  display: block;
-  text-align: center;
-  margin-top: 0.4rem;
-  font-size: 0.9rem;
+
+.credits {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.topic-block {
+  background: #f9fafb;   /* very light gray */
+  border-radius: 8px;
+  padding: 3px 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.topic-meta {
+  font-size: 1rem;
   color: var(--muted);
+  font-weight: normal;
+}
+ 
+
+/* Adventuring Party Image Layout */
+
+
+.image-layout {
+  display: flex;               /* horizontal row */
+  gap: 1.5rem;                 /* space between columns */
+  justify-content: flex-start;     /* left-align the whole layout */
+  align-items: center;      /* vertically center columns */
+  flex-wrap: wrap;             /* wrap on small screens */
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;      /* stack two images vertically */
+  gap: 1rem;                   /* space between the stacked images */
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;      /* keep flexibility if needed */
+  justify-content: flex-start;
+}
+
+.stacked-image,
+.single-image {
+  width: 100%;                
+  max-width: 400px;
+  height: auto;                /* maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Elemntal Image Layout */
+
+.elemental-image {
+  width: 100%;         
+  max-width: 600px;
+  height: auto;         /* maintains aspect ratio */
+  border-radius: 8px;   /* optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional styling */
+}
+
+/* NPC Image Layout */
+
+.npc-row {
+  display: flex;                /* put children in a row */
+  gap: 2rem;                    /* space between the two NPC blocks */
+  justify-content: flex-start;  /* align the row to the left */
+  align-items: flex-end;       /* vertical align images by their bottom edges */
+  flex-wrap: wrap;              /* wrap to next line on small screens */
+}
+
+.npc-block {
+  display: flex;
+  flex-direction: column;       /* stack heading above image */
+  align-items: center;          /* center content inside each block */
+  max-width: 350px;             /* optional: constrain width */
+}
+
+.npc-block h3 {
+  font-size: 1.17rem;
+  text-align: center;           /* center heading over image */
+  margin-bottom: 0.5rem;
+}
+
+.npc-picture {
+  height: 300px;                /* fixed height for all images */
+  width: auto;                  /* width adjusts to keep aspect ratio */
+  border-radius: 8px;
+  object-fit: cover;            /* crop if necessary to fill height */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 
