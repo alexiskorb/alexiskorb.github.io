@@ -6,8 +6,14 @@
   --card: #ffffff;
 }
 
+
 * {
   box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -115,6 +121,16 @@ section {
   background: #d1d5db;
 }
 
+.orcid-icon {
+  width: 18px;         /* smaller, inline with text */
+  height: 18px;
+  vertical-align: text-bottom;
+}
+
+.pub {
+  margin-bottom: 1rem;
+}
+
 .teaching-row {
   display: grid;
   grid-template-columns: 120px 1fr; /* left column fixed width, right column fills remaining space */
@@ -131,16 +147,6 @@ section {
 
 .teaching-info {
   color: var(--text);
-}
-
-.orcid-icon {
-  width: 18px;         /* smaller, inline with text */
-  height: 18px;
-  vertical-align: text-bottom;
-}
-
-.pub {
-  margin-bottom: 1rem;
 }
 
 
@@ -252,7 +258,8 @@ section {
   display: flex;
   flex-direction: column;       /* stack heading above image */
   align-items: center;          /* center content inside each block */
-  max-width: 350px;             /* optional: constrain width */
+  width: 100%;
+  max-width: 300px;             /* optional: constrain width */
 }
 
 .npc-block h3 {
@@ -262,12 +269,11 @@ section {
 }
 
 .npc-picture {
-  height: 300px;                /* fixed height for all images */
+  height: 270px;                /* fixed height for all images */
   width: auto;                  /* width adjusts to keep aspect ratio */
+  max-width: 100%;
   border-radius: 8px;
   object-fit: cover;            /* crop if necessary to fill height */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-
 
