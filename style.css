@@ -149,6 +149,23 @@ section {
   color: var(--text);
 }
 
+.service-row {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* left column fixed width, right column fills remaining space */
+  gap: 0.8rem;
+  align-items: start;
+  margin-bottom: 1rem;
+  padding: 0rem;
+}
+
+.service-type {
+  font-weight: bold;
+  color: black;
+}
+
+.service-info {
+  color: var(--text);
+}
 
 @media (max-width: 768px) {
   .bio {
