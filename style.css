@@ -121,6 +121,12 @@ section {
   background: #d1d5db;
 }
 
+.inline-icon {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
 .orcid-icon {
   width: 18px;         /* smaller, inline with text */
   height: 18px;
@@ -140,12 +146,20 @@ section {
   padding: 0rem;
 }
 
+#teaching h3 {
+  margin-top: 0rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #ddd;
+}
+
 .teaching-date {
   font-weight: bold;
   color: black;
 }
 
 .teaching-info {
+  font-weight: bold;
   color: var(--text);
 }
 
@@ -293,4 +307,3 @@ section {
   object-fit: cover;            /* crop if necessary to fill height */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
